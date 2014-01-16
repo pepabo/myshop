@@ -1,1 +1,5 @@
-MyShop
+<% if current_user %>
+  Hello, <%= current_user.info.name %>
+<% else %>
+  <%= link_to 'Please sign in', signin_path %>
+<% end %>
